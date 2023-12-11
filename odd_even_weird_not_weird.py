@@ -2,9 +2,9 @@
 def odd_even(n):
     if n % 2 != 0:
         print("Weird")
-    elif n % 2 == 0 in range(2,5): # this means number is even
+    elif n % 2 == 0 and 2 <= n <= 5: # this means even number
         print("Not Weird")
-    elif n % 2 == 0 in range(6,20):
+    elif n % 2 == 0 and 6 <= n <= 20:
         print("Weird")
     elif n % 2 == 0 and n > 20:
         print("Not Weird")
