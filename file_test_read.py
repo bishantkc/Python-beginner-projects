@@ -1,6 +1,10 @@
 # import os
 # if os.path.exists("new_file"):
 #     os.remove("new_file")
+#             or
+# file_name = "new_file"
+# if os.path.exists(file_name):
+#     os.remove(file_name
 
 
 # with open("file_test", "r" ) as f:
