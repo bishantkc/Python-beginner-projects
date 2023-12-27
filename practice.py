@@ -10,6 +10,22 @@
  #   print(i)
   #  i += 1
 
+'''
+import my_computations
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print(str(num1) + " + " + str(num2) + " = " + str(my_computations.int_number(num1, num2)))
+
+             or
+
+from my_computations import int_number
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print(str(num1) + " + " + str(num2) + " = " + str(int_number(num1, num2)))
+'''
+
 number_list = [1, 3, -2, 4.5]
 for number in number_list:
     print(number)
