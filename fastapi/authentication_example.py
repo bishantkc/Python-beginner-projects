@@ -145,6 +145,19 @@ async def get_current_active_user(current_user: Annotated[User, Depends(get_curr
         raise HTTPException(status_code=400, detail="Inactive user")
     return current_user
 
+# Validate email to enter only certain mail
+def validate_email(email: str):
+    allowed_domain= ["krispcall.com"]
+    # Split assigns value before '@' as username and after as domain
+    # 1 specifies number of split
+    username, domain = email.split("@", 1) if "@" in email else (None, None)
+    if username and domain in allowed_domains:
+        return True
+    else:
+        print(username, domain)
+        return False
+
+
 # Register endpoint
 @app.post("/register/")
 def register(username: str, password: str, email: str, full_name: str, db: Session = Depends(get_db)):
