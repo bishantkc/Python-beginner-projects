@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI, Path        #get = get an information
 from pydantic import BaseModel
 from typing import Optional               #post = create something new
@@ -59,3 +60,6 @@ def update_student(student_id: int, student: Update_student):
 
 
     return students[student_id]
+
+if __name__ == "__main__":
+    uvicorn.run("student_info_FastAPI:app", reload=True)
